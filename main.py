@@ -22,6 +22,7 @@ class GUI:
         self.scale = 100 # 缩放比例
         self.comp_id = 0 # 画布中的元件id
         self.drag_data = {"item": None, "x": 0, "y": 0}  # 存储拖动信息的字典
+
         self.drag_canvas = {"prew_x": None, "prew_y": None}# prew_x, prew_y用于计算鼠标拖动的距离       
         self.components = ["电压源", "电流源", "电阻", "电容", "电感", "接地"]  # 存储左侧元件栏的工具
         self.task_options = ["电路参数求解", "戴维南定理", "复频域分析", "最大功率传输定理", "方波信号暂态分析", "暂态分析"] # 储存任务
