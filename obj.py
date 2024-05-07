@@ -135,7 +135,6 @@ class componnet_fang_source_v(component_source_v):
         T = Decimal(str(1 / self.F))
         t = t % T
         if t < T / 2:
-            #print(self.property)
             return self.property
         else:
             #print(0)
@@ -592,9 +591,9 @@ class calculator():
             sti_value = Matrix(calculator.get_sti_value(e_temp,t))
             value = calculator.cal(0.01, A2, B2, sti_value, value, t,e_temp)
             target_value=A1.multiply(value)+B1.multiply(sti_value)
-            t += 0.01
+            t += 0.001
         X = range(len(re[0]))
-        X = [i / 100 for i in X]
+        X = [i / 1000 for i in X]
         for i in range(len(re)):
             label=List_target[i][1]+str(List_target[i][0])
             plt.plot(X,re[i],label=label)
